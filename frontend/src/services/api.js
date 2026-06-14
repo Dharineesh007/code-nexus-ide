@@ -1,13 +1,11 @@
 import axios from 'axios';
 
-// Use your current Cloudflare URL
-const API_BASE_URL = 'https://inf-placing-ethernet-mono.trycloudflare.com'; 
-
+// Direct local network connection via mobile hotspot
+const API_BASE_URL = 'https://sellers-supplies-hostels-col.trycloudflare.com';
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*' // This tells the phone to stop blocking
+    'Content-Type': 'application/json'
   }
 });
 
