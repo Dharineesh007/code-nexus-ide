@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+
+# 🚨 SECRETS - NEVER UPLOAD TO GITHUB
+.env
+
+# 🚨 DYNAMIC EXECUTION FOLDERS - NEVER UPLOAD
+temp/
+controllers/temp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

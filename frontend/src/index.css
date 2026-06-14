@@ -1,0 +1,218 @@
+/* --- src/index.css --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-base: #09090b;       /* Deepest dark for background */
+  --bg-panel: #18181b;      /* Slightly lighter for panels */
+  --bg-hover: #27272a;      /* Hover states */
+  --border: #333338;        /* Subtle borders */
+  --accent: #0ea5e9;        /* Modern vibrant blue */
+  --accent-glow: rgba(14, 165, 233, 0.15);
+  --danger: #ef4444;
+  --success: #22c55e;
+  --text-main: #f4f4f5;
+  --text-muted: #a1a1aa;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+/* Beautiful Dark Mode Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* UI Components */
+.panel {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-header {
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--bg-base);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* Buttons with Smooth Transitions */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-primary {
+  background-color: var(--accent);
+  color: #000;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: #38bdf8;
+  transform: translateY(-1px);
+}
+.btn-primary:disabled {
+  background-color: var(--border);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-muted);
+}
+.btn-ghost:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-main);
+}
+.btn-danger {
+  background-color: transparent;
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+.btn-danger:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+/* File Explorer Tree Nodes */
+.tree-node {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  color: var(--text-muted);
+  font-size: 13.5px;
+  transition: all 0.15s ease;
+  border-left: 2px solid transparent;
+}
+.tree-node:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-main);
+}
+.tree-node.active {
+  background-color: var(--accent-glow);
+  border-left: 2px solid var(--accent);
+  color: var(--accent);
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.icon-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--danger);
+}
+
+/* =========================================
+   LOGIN SCREEN "WOW" FACTOR
+   ========================================= */
+
+/* 1. Slow moving background gradient */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #09090b, #18181b, #0c4a6e, #09090b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Frosted glass effect for the panel */
+.glass-panel {
+  background: rgba(24, 24, 27, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* 3. Input boxes with embedded icons */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper svg {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+/* When the input is focused, make the icon light up blue! */
+.input-wrapper .input-field:focus + svg,
+.input-wrapper .input-field:focus ~ svg {
+  color: var(--accent);
+}
+
+.input-wrapper .input-field {
+  padding-left: 42px; /* Push the text over so it doesn't overlap the icon */
+}
