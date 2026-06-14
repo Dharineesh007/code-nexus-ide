@@ -1,12 +1,13 @@
 import axios from 'axios';
 
-// Vercel will invisibly forward this to your Cloudflare Tunnel
-const API_BASE_URL = '/proxy'; 
+// Use your current Cloudflare URL
+const API_BASE_URL = 'https://inf-placing-ethernet-mono.trycloudflare.com'; 
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*' // This tells the phone to stop blocking
   }
 });
 

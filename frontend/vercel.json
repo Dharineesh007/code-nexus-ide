@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/proxy/:path*",
-      "destination": " https://arabia-safely-wizard-lesson.trycloudflare.com/:path*"
-    }
-  ]
-}
