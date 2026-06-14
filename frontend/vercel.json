@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/proxy/:path*",
-      "destination": "https://anthropology-lawsuit-fool-anonymous.trycloudflare.com/:path*"
+      "destination": "https://inf-placing-ethernet-mono.trycloudflare.com/:path*"
     }
   ]
 }
