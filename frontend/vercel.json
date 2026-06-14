@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/proxy/:path*",
+      "destination": "https://anthropology-lawsuit-fool-anonymous.trycloudflare.com/:path*"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Cloudflare Tunnel URL
-const API_BASE_URL = 'https://anthropology-lawsuit-fool-anonymous.trycloudflare.com'; 
+// Vercel will invisibly forward this to your Cloudflare Tunnel
+const API_BASE_URL = '/proxy'; 
 
 const api = axios.create({
   baseURL: API_BASE_URL,
