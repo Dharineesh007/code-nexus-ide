@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/proxy/:path*",
-      "destination": "https://inf-placing-ethernet-mono.trycloudflare.com/:path*"
+      "destination": " https://arabia-safely-wizard-lesson.trycloudflare.com/:path*"
     }
   ]
 }
