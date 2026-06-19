@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-// Direct local network connection via mobile hotspot
-const API_BASE_URL = 'https://confidential-magazine-gentleman-webmaster.trycloudflare.com';
+// Strict Local Development URL
+const API_BASE_URL = 'http://localhost:5000'; 
+
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
