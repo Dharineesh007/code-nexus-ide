@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Strict Local Development URL
-const API_BASE_URL = 'http://localhost:5000'; 
+// Live Render Cloud Backend
+const API_BASE_URL = 'https://code-nexus-ide.onrender.com'; 
 
 const api = axios.create({
   baseURL: API_BASE_URL,
